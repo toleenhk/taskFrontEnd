@@ -1,38 +1,320 @@
-.App {
-  text-align: center;
-}
+/* src/styles/tailwind.css */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+*:focus {
+  outline: none;
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: white;
+}
+.bg-icon-guides {
+  background-color: lightgrey;
+  border-radius: 15px;
+}
+.small {
+  flex-grow: 1;
+}
+
+.double {
+  flex-grow: 2;
+}
+/* #common-Solution-section {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+
+  justify-content: space-between;
+  align-items: stretch;
+} */
+.slideshow-repeat-container {
+  position: relative;
+}
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  right: 0%;
+  background: none;
+  border: none;
+  font-size: 2rem;
+}
+.slick-next::before {
+  color: black !important;
+}
+
+/* blurry end */
+.blurred-end {
+  background: linear-gradient(
+    to left,
+    transparent 0%,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+/* test */
+
+/* .rectangle {
+  position: relative;
+  height: 100px;
+  width: 325px;
+  background-color: #f66969;
+  border-radius: 25px 25px 25px 0;
+}
+
+.rectangle::before {
+  content: "";
+  position: absolute;
+
+  background-color: transparent;
+  bottom: -50px;
+  height: 50px;
+  width: 25px;
+  border-top-left-radius: 25px;
+  box-shadow: 0 -25px 0 0 #f66969;
+} */
+
+.curves::before {
+  content: "";
+  position: absolute;
+
+  background-color: transparent;
+  top: 80px;
+  right: 7px;
+  height: 15px;
+  width: 15px;
+  border-bottom-right-radius: 25px;
+  box-shadow: 0 5px 0 0 #e2e8f0;
+}
+.solutions-color {
+  background-color: #e2e8f0;
+}
+
+.second-curve::after {
+  content: "";
+  position: absolute;
+
+  background-color: transparent;
+  top: 151px;
+  left: -12px;
+  height: 15px;
+  width: 15px;
+  border-bottom-right-radius: 25px;
+  box-shadow: 0 6px 0 0 #e2e8f0;
+}
+
+.curve-three::after {
+  content: "";
+  position: absolute;
+
+  background-color: #e2e8f0;
+  top: 223.5px;
+  right: 55.5px;
+  height: 10px;
+  width: 10px;
+  border-bottom-right-radius: 25px;
+  box-shadow: 0 6px 0 0 white;
+}
+.icon-size {
+  font-size: x-large;
+}
+
+.container-paragraph-Al {
+  width: 500px !important;
+}
+
+.font-al {
+  font-family: "Work Sans", sans-serif;
+}
+
+.insight-font {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 34.4px; /* Adjust as needed */
+}
+.insight-font-hint {
+  font-weight: 500;
+  font-size: 12px;
+
+  letter-spacing: 0.1em;
+}
+.p-insight-font {
+  font-size: 16px;
+  font-weight: 400;
+}
+.contact-email {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #0312ff, #035fec);
+  -webkit-background-clip: text; /* For Safari */
+  background-clip: text;
+  color: transparent;
+  /* You can add more styling here */
+}
+
+.borderofemail {
+  position: absolute;
+  top: -17px;
+}
+.fancy-inverted-curve::after {
+  content: "";
+  position: absolute;
+
+  background-color: rgb(229 231 235);
+  bottom: 41px;
+  left: 112px;
+  height: 13px;
+  width: 13px;
+  border-bottom-left-radius: 25px;
+  box-shadow: -1px 1px 0 0 black;
+}
+.fancy-inverted-curve2::before {
+  content: "";
+  position: absolute;
+
+  background-color: white;
+  bottom: -10px;
+  left: 85px;
+  height: 20px;
+  width: 20px;
+  border-bottom-left-radius: 25px;
+  box-shadow: -2px 2px 0 0 white;
+}
+.hidding-extraItems {
+  content: "";
+  position: absolute;
+
+  background-color: white;
+  bottom: 0px;
+  right: -10px;
+  height: 18px;
+  width: 15px;
+  border-bottom-left-radius: 25px;
+  box-shadow: -2px 2px 0 0 white;
+}
+
+/* Footer */
+
+footer {
+  background: linear-gradient(to right, #182129 100%, #151627 100%);
+  padding-top: 3rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.footer__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+  width: 80%;
+  margin: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footer__container article {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.7rem;
+}
+
+.footer__container article p {
+  margin-top: 0.5rem;
+}
+
+.footer__container article h4 {
+  margin-bottom: 0.6rem;
+}
+.footer__socials {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 5px;
+}
+
+.footer__socials a:hover {
+  background: transparent;
+}
+
+.footer__copyright {
+  text-align: center;
+  padding: 1.5rem 0;
+  border-top: 2px solid var(--color-primary-variant);
+  margin-top: 1rem;
+}
+.custom-text-footer a {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14.4px;
+}
+
+/* Main's curves */
+
+.fancy-inverted-curve-Main::after {
+  content: "";
+  position: absolute;
+
+  background-color: white;
+  bottom: 41px;
+  left: 96px;
+  height: 13px;
+  width: 13px;
+  border-bottom-left-radius: 25px;
+  box-shadow: -1px 1px 0 0 black;
+}
+.fancy-inverted-curve2-Main::before {
+  content: "";
+  position: absolute;
+
+  background-color: white;
+  bottom: -10px;
+  left: 85px;
+  height: 20px;
+  width: 20px;
+  border-bottom-left-radius: 25px;
+  box-shadow: -2px 2px 0 0 white;
+}
+.hidding-extraItems {
+  content: "";
+  position: absolute;
+
+  background-color: white;
+  bottom: 0px;
+  right: -10px;
+  height: 18px;
+  width: 15px;
+  border-bottom-left-radius: 25px;
+  box-shadow: -2px 2px 0 0 white;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #0312ff 0%, #035fec 100%);
+  background-clip: text;
+  -webkit-background-clip: text; /* For Safari */
+  color: transparent;
+}
+
+.gradient-background {
+  background: linear-gradient(to right, #0312ff 0%, #035fec 100%);
+  background-clip: text;
+  -webkit-background-clip: text; /* For Safari */
+  color: transparent;
+}
+.gradient-text-dark {
+  background: linear-gradient(to right, #2a3a48 0%, #151627 100%);
+  background-clip: text;
+  -webkit-background-clip: text; /* For Safari */
+  color: transparent;
 }
